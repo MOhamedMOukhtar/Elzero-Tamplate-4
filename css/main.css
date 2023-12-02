@@ -532,8 +532,13 @@ main header .content {
 
 .main_content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(447px, 1fr));
     gap: 20px;
+}
+
+@media (min-width:560px) {
+    .main_content {
+        grid-template-columns: repeat(auto-fill, minmax(447px, 1fr));
+    }
 }
 
 /* Quick Draft */
@@ -841,8 +846,9 @@ main header .content {
     position: relative;
 }
 
-.main_content .latest .content .elemo .elemomo:nth-child(1)::before {
+/* .main_content .latest .content .elemo .elemomo:nth-child(1)::before {
     content: "3 Days Ago";
+    width: 88px;
     font-size: 13px;
     font-weight: 500;
     padding: 4px 10px;
@@ -855,6 +861,7 @@ main header .content {
 
 .main_content .latest .content .elemo .elemomo:nth-child(2)::before {
     content: "5 Days Ago";
+    width: 88px;
     font-size: 13px;
     font-weight: 500;
     padding: 4px 10px;
@@ -867,6 +874,7 @@ main header .content {
 
 .main_content .latest .content .elemo .elemomo:nth-child(3)::before {
     content: "7 Days Ago";
+    width: 88px;
     font-size: 13px;
     font-weight: 500;
     padding: 4px 10px;
@@ -879,6 +887,7 @@ main header .content {
 
 .main_content .latest .content .elemo .elemomo:nth-child(4)::before {
     content: "9 Days Ago";
+    width: 88px;
     font-size: 13px;
     font-weight: 500;
     padding: 4px 10px;
@@ -887,7 +896,7 @@ main header .content {
     top: 15px;
     right: 0;
     background-color: #eee;
-}
+} */
 
 .main_content .latest .content .elemo .elemomo img {
     width: 100px;
@@ -899,6 +908,7 @@ main header .content {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    flex-grow: 1;
 }
 
 .main_content .latest .content .elemo .elemomo div h4 {
@@ -912,6 +922,12 @@ main header .content {
     font-weight: 500;
 }
 
+.main_content .latest .content .elemo .elemomo span {
+    height: fit-content;
+    font-size: 13px;
+    align-self: center;
+}
+
 @media (max-width:767px) {
     .main_content .latest .content h2 {
         text-align: center;
@@ -921,6 +937,7 @@ main header .content {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
 
     .main_content .latest .content .elemo .elemomo img {
@@ -934,7 +951,7 @@ main header .content {
     }
 
     .main_content .latest .content .elemo .elemomo div p {
-        margin-bottom: 40px;
+        margin-bottom: 15px;
     }
 
     .main_content .latest .content .elemo .elemomo:nth-child(1)::before,
@@ -1651,7 +1668,6 @@ body .search input::before {
 
 .setting-page {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     gap: 20px;
 }
 
@@ -1676,6 +1692,12 @@ body .search input::before {
     font-size: 12px;
 }
 
+@media (min-width:620px) {
+    .setting-page {
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    }
+}
+
 
 /* general-info */
 
@@ -1688,9 +1710,10 @@ body .search input::before {
     border-width: 1px;
 }
 
-.general-info div div div input {
+.general-info div .shift {
     background-color: #f0f4f8;
     cursor: not-allowed;
+    width: calc(100% - 71px);
 }
 
 .general-info div div div input::placeholder {
@@ -2048,7 +2071,6 @@ body .search input::before {
 
 .main-projects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     gap: 20px;
 }
 
@@ -2087,11 +2109,16 @@ body .search input::before {
 }
 
 .main-projects .Design div:nth-child(4) div {
-    width: 260px;
     height: 8px;
     background-color: #eee;
     border-radius: 30px;
     position: relative;
+}
+
+@media (min-width:420px) {
+    .main-projects .Design div:nth-child(4) div {
+        width: 260px;
+    }
 }
 
 .main-projects .Design div:nth-child(4) div::before {
@@ -2223,11 +2250,17 @@ body .search input::before {
     }
 }
 
+@media (min-width:620px) {
+    .main-projects {
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    }
+
+}
+
 /* main-courses */
 
 .main-courses {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -2260,10 +2293,17 @@ body .search input::before {
 
 }
 
+@media (min-width:420px) {
+    .main-courses {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width:420px) {}
+
 /* main-friends */
 .main-friends {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -2303,11 +2343,36 @@ body .search input::before {
     transform: translateY(-50%);
 }
 
+
+
 @media (max-width:420px) {
 
     .for-friends .dash,
     .main-friends {
         padding: 10px;
+    }
+
+    .main-friends .element {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media (min-width:400px) {
+    .main-friends {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width:400px) {
+    .main-friends .element {
+        width: 100%;
+    }
+
+    .main-friends .element .three {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
