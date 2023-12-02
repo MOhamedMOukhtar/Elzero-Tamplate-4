@@ -526,7 +526,7 @@ main header .content {
 .welcome .osama .elemomo::before {
     content: "";
     width: calc(100% + 40px);
-    height: .1px;
+    height: 1px;
     background-color: #ddddddb3;
     position: absolute;
     top: -20px;
@@ -536,7 +536,7 @@ main header .content {
 .welcome .osama .elemomo::after {
     content: "";
     width: calc(100% + 40px);
-    height: .1px;
+    height: 1px;
     background-color: #ddddddb3;
     position: absolute;
     bottom: -20px;
