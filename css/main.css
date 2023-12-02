@@ -495,6 +495,34 @@ main header .content {
     position: relative;
 }
 
+@media (max-width:620px) {
+    .welcome .osama .elemomo {
+        display: block;
+    }
+
+    .welcome .osama .elemomo div {
+        margin-bottom: 20px;
+    }
+
+    .welcome .osama .elemomo div p {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 5px;
+    }
+
+    .welcome .osama {
+        height: 320px;
+    }
+
+
+}
+
+@media (max-width:500px) {
+    .welcome .zero .font {
+        width: 140px;
+    }
+}
+
 .welcome .osama .elemomo::before {
     content: "";
     width: calc(100% + 40px);
@@ -846,58 +874,6 @@ main header .content {
     position: relative;
 }
 
-/* .main_content .latest .content .elemo .elemomo:nth-child(1)::before {
-    content: "3 Days Ago";
-    width: 88px;
-    font-size: 13px;
-    font-weight: 500;
-    padding: 4px 10px;
-    border-radius: 6px;
-    position: absolute;
-    top: 15px;
-    right: 0;
-    background-color: #eee;
-}
-
-.main_content .latest .content .elemo .elemomo:nth-child(2)::before {
-    content: "5 Days Ago";
-    width: 88px;
-    font-size: 13px;
-    font-weight: 500;
-    padding: 4px 10px;
-    border-radius: 6px;
-    position: absolute;
-    top: 15px;
-    right: 0;
-    background-color: #eee;
-}
-
-.main_content .latest .content .elemo .elemomo:nth-child(3)::before {
-    content: "7 Days Ago";
-    width: 88px;
-    font-size: 13px;
-    font-weight: 500;
-    padding: 4px 10px;
-    border-radius: 6px;
-    position: absolute;
-    top: 15px;
-    right: 0;
-    background-color: #eee;
-}
-
-.main_content .latest .content .elemo .elemomo:nth-child(4)::before {
-    content: "9 Days Ago";
-    width: 88px;
-    font-size: 13px;
-    font-weight: 500;
-    padding: 4px 10px;
-    border-radius: 6px;
-    position: absolute;
-    top: 15px;
-    right: 0;
-    background-color: #eee;
-} */
-
 .main_content .latest .content .elemo .elemomo img {
     width: 100px;
     border-radius: 6px;
@@ -1213,6 +1189,7 @@ main header .content {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding-right: 60px;
 }
 
 
@@ -1238,7 +1215,8 @@ main header .content {
 
 
 .main_content .Last_Project_Progress .content .elemomo {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     margin-bottom: 25px;
     position: relative;
 }
@@ -1262,10 +1240,16 @@ main header .content {
 .main_content .Last_Project_Progress .content .elemomo:nth-child(1)::before {
     content: "";
     width: 3px;
-    height: 208px;
+    height: 216px;
     background-color: var(--second-color);
     position: absolute;
     left: 10px;
+}
+
+@media (max-width:340px) {
+    .main_content .Last_Project_Progress .content .elemomo:nth-child(1)::before {
+        height: 230px;
+    }
 }
 
 .main_content .Last_Project_Progress .content img {
@@ -1311,7 +1295,8 @@ main header .content {
 
 
 .main_content .Reminders .content .elemomo {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     margin-bottom: 20px;
 }
@@ -1550,6 +1535,15 @@ main header .content {
 
 .Social_Media_Stats .content .elemomo:nth-child(4) span {
     background-color: #0077b5;
+}
+
+@media (max-width:430px) {
+    .Social_Media_Stats .content .elemomo span {
+        font-size: 12px;
+        right: 5px;
+        top: 45px;
+
+    }
 }
 
 /* Projects */
