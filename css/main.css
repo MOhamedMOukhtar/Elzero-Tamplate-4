@@ -537,7 +537,7 @@ main header .content {
     content: "";
     width: calc(100% + 40px);
     height: 1px;
-    background-color: #dddddd;
+    background-color: #dddddd82;
     position: absolute;
     bottom: -20px;
     left: -20px;
